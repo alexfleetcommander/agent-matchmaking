@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-matchmaking"
+version = "0.1.0"
+description = "Cross-platform discovery and trust-weighted matching for the autonomous agent economy — the market/discovery layer of the Agent Trust Stack"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.8"
+authors = [
+    { name = "AB Support", email = "info@vibeagentmaking.com" },
+]
+keywords = [
+    "agent", "matchmaking", "discovery", "federation", "trust",
+    "matching", "marketplace", "capability", "ranking", "pricing",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://vibeagentmaking.com"
+Repository = "https://github.com/brycebostick/agent-matchmaking"
+Whitepaper = "https://vibeagentmaking.com/whitepaper/matchmaking-protocol/"
+
+[project.optional-dependencies]
+coc = ["chain-of-consciousness>=0.1.0"]
+arp = ["agent-rating-protocol>=0.1.0"]
+ajp = ["agent-justice-protocol>=0.1.0"]
+asa = ["agent-service-agreements>=0.1.0"]
+alp = ["agent-lifecycle-protocol>=0.1.0"]
+trust = [
+    "chain-of-consciousness>=0.1.0",
+    "agent-rating-protocol>=0.1.0",
+    "agent-justice-protocol>=0.1.0",
+    "agent-service-agreements>=0.1.0",
+    "agent-lifecycle-protocol>=0.1.0",
+]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.scripts]
+agent-match = "agent_matchmaking.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agent_matchmaking*"]
