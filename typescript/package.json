@@ -1,0 +1,43 @@
+{
+  "name": "agent-matchmaking",
+  "version": "0.1.0",
+  "description": "Cross-platform discovery and trust-weighted matching for the autonomous agent economy — TypeScript reference implementation",
+  "author": "AB Support LLC",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/amp.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "agent-matchmaking",
+    "amp",
+    "ucp",
+    "unified-capability-profile",
+    "trust-weighted-matching",
+    "federation",
+    "discovery",
+    "auction",
+    "vickrey",
+    "gale-shapley",
+    "agent-commerce",
+    "ai-agent",
+    "chain-of-consciousness"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AB-Support/agent-matchmaking"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}
